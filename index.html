@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
+
+</head>
+<body>
+    <section>
+        <div class="code">
+            <label for="">
+                <i class="fab fa-html5"></i> 
+                <p>HTML</p>
+                <button id="copy-button1" onclick="copy('code-HTML', 'copy-button1')" >
+                    <i class="fas fa-clipboard" ></i>
+                </button> 
+            </label>
+            <textarea oninput="rafraichir()" id="code-HTML" class="" cols="30" rows="10" placeholder="Ecrivez ou coller votre code HTML ici..."></textarea>
+            <label for="">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+                <button id="copy-button2" onclick="copy('code-css', 'copy-button2')" >
+                    <i class= "fas fa-clipboard"></i>
+                </button>
+                
+            </label>
+            <textarea oninput="rafraichir()" class="" id="code-css" cols="30" rows="10" placeholder="Ecrivez ou coller votre code CSS ici..."></textarea>
+            <label for="">
+                <i class="fab fa-js"></i>
+                <p>Javascript</p>
+                <button id="copy-button3" onclick="copy('code-js', 'copy-button3')">
+                    <i class="fas fa-clipboard" ></i>
+                </button>
+                
+            </label>
+            <textarea oninput="rafraichir()" class="" id="code-js" cols="30" rows="10" placeholder="Ecrivez ou coller votre code Javascript ici..."></textarea>
+
+        </div>
+        <iframe id="res"></iframe>
+    </section>
+    <script src="script.js"></script>
+    
+</html>
